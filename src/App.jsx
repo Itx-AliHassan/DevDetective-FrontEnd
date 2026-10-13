@@ -1,18 +1,7 @@
-import { Show, UserProfile } from "@clerk/react"
-import AppRoutes from "./pages/Routes"
+import AppRoutes from "./pages/Routes";
 
 const App = () => {
-  return (
-    <>
-      <Show when="signed-in">
-        <UserProfile />
-      </Show >
+  return <AppRoutes />;
+};
 
-      <Show when="signed-out">
-        <AppRoutes />
-      </Show>
-    </>
-  )
-}
-
-export default App
+export default App;

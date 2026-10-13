@@ -5,9 +5,17 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 
+const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <ClerkProvider>
+    <ClerkProvider
+      publishableKey={publishableKey}
+      signInUrl='/auth/sign-in'
+      signUpUrl='/auth/sign-up'
+      signUpFallbackRedirectUrl="/auth/sign-in"
+      signInFallbackRedirectUrl="/dashboard"
+    >
       <App />
     </ClerkProvider>
   </BrowserRouter>
