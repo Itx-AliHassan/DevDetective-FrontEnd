@@ -92,8 +92,7 @@ const Dashboard = () => {
             </div>
 
             <a
-              href="https://github.com/apps/devdetective-app/installations/new/"
-              target="_blank"
+              href="https://github.com/apps/bugdetect-app/installations/new/"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-my-accent px-5 py-3 text-sm font-bold text-my-bg-primary transition-all hover:bg-my-accent-hover hover:shadow-[0_0_25px_rgba(32,245,138,0.2)]"
             >
