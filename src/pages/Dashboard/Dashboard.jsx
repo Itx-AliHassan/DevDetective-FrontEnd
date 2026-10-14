@@ -1,8 +1,9 @@
 import { SignOutButton, useUser } from "@clerk/react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const Dashboard = () => {
   const { user, isLoaded } = useUser();
+  const [params] = useSearchParams()
   const displayName = user?.fullName || user?.username || "Developer";
   const email = user?.primaryEmailAddress?.emailAddress;
   const initials = displayName
@@ -11,6 +12,8 @@ const Dashboard = () => {
     .join("")
     .slice(0, 2)
     .toUpperCase();
+  const installationId = params.get("installation_id");
+  console.log('installationId', installationId)
 
   return (
     <div className="min-h-screen bg-my-bg-primary text-my-text-primary">
